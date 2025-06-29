@@ -15,7 +15,7 @@ try:
     print("✅ Client instantiation successful")
 
     # Test that the client has expected methods
-    expected_methods = ["get_accounts", "get_transactions", "get_transaction"]
+    expected_methods = ["get_accounts", "get_transactions", "get_transaction_by_id"]
     for method in expected_methods:
         if hasattr(client, method):
             print(f"✅ Method {method} exists")

@@ -58,7 +58,7 @@ class ElectronicRoutingInfo:
     """Electronic routing information."""
 
     accountNumber: str
-    routingnumber: str
+    routingNumber: str
     bankName: Optional[str] = None
 
     @classmethod
@@ -66,7 +66,7 @@ class ElectronicRoutingInfo:
         """Create an ElectronicRoutingInfo from a dictionary."""
         return cls(
             accountNumber=data["accountNumber"],
-            routingnumber=data["routingnumber"],
+            routingNumber=data["routingNumber"],
             bankName=data.get("bankName"),
         )
 
