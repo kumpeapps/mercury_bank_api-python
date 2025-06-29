@@ -28,9 +28,10 @@ class MercuryBankAPIClient:
         transactions = client.get_transactions(account_id="account_123")
     """
 
-    BASE_URL = "https://api.mercury.com/api/v1"
+    base_url = "https://api.mercury.com/api/v1"
+    SANDBOX_BASE_URL = "https://api-sandbox.mercury.com/api/v1"
 
-    def __init__(self, api_token: str, timeout: int = 30):
+    def __init__(self, api_token: str, timeout: int = 30, sandbox: bool = False):
         """
         Initialize the Mercury Bank API client.
 
@@ -38,6 +39,8 @@ class MercuryBankAPIClient:
             api_token: Your Mercury API token
             timeout: Request timeout in seconds (default: 30)
         """
+        if sandbox:
+            self.base_url = self.SANDBOX_BASE_URL
         self.api_token = api_token
         self.timeout = timeout
         self.session = requests.Session()
@@ -76,7 +79,7 @@ class MercuryBankAPIClient:
         Raises:
             MercuryBankAPIError: If the API request fails
         """
-        url = urljoin(self.BASE_URL + "/", endpoint.lstrip("/"))
+        url = urljoin(self.base_url + "/", endpoint.lstrip("/"))
 
         try:
             response = self.session.request(
