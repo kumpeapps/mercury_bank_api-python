@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mercury_bank_api"
-version = "1.0.0"
+version = "1.0.2"
 description = "A comprehensive Python client for the Mercury Bank API"
 readme = "README.md"
 license = "MIT"
