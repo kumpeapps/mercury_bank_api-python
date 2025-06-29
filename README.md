@@ -24,17 +24,6 @@ A comprehensive Python client library for interacting with the Mercury Bank API.
 pip install mercury-bank-api
 ```
 
-### Install from Source
-
-If you want to install from source or contribute to development:
-
-```bash
-git clone https://github.com/yourusername/mercury_bank_api-python.git
-cd mercury_bank_api-python
-pip install -r requirements.txt
-pip install -e .
-```
-
 ## Quick Start
 
 ```python
