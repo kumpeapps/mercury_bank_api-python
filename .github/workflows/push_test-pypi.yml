@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/mercury_bank_api
+      url: https://test.pypi.org/p/mercury-bank-api-python-client
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:

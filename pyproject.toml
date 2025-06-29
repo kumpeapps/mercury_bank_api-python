@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mercury-bank-api-python"
-version = "0.0.1beta"
+name = "mercury_bank_api"
+version = "0.0.1b0"
 description = "A comprehensive Python client for the Mercury Bank API"
 readme = "README.md"
 license = "MIT"
@@ -37,10 +37,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/mercury_bank_api-python"
+Homepage = "https://github.com/KumpeApps/mercury_bank_api-python"
 Documentation = "https://docs.mercury.com/reference"
-Repository = "https://github.com/yourusername/mercury_bank_api-python"
-"Bug Tracker" = "https://github.com/yourusername/mercury_bank_api-python/issues"
+Repository = "https://github.com/KumpeApps/mercury_bank_api-python"
+"Bug Tracker" = "https://github.com/KumpeApps/mercury_bank_api-python/issues"
 
 [tool.setuptools.packages.find]
 include = ["mercury_bank_api*"]

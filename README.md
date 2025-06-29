@@ -18,16 +18,27 @@ A comprehensive Python client library for interacting with the Mercury Bank API.
 - Python 3.7+
 - A Mercury Bank API token (get one from your [Mercury dashboard](https://mercury.com/settings/tokens))
 
-### Install Dependencies
+### Install from PyPI (Recommended)
 
 ```bash
+pip install mercury-bank-api-python
+```
+
+### Install from Source
+
+If you want to install from source or contribute to development:
+
+```bash
+git clone https://github.com/yourusername/mercury_bank_api-python.git
+cd mercury_bank_api-python
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Quick Start
 
 ```python
-from mercury_client import MercuryBankAPIClient
+from mercury_bank_api import MercuryBankAPIClient
 
 # Initialize the client with your API token
 client = MercuryBankAPIClient(api_token="your_api_token_here")
@@ -162,7 +173,7 @@ Response object containing transactions and metadata.
 The client raises `MercuryBankAPIError` for API-related errors:
 
 ```python
-from mercury_client import MercuryBankAPIClient, MercuryBankAPIError
+from mercury_bank_api import MercuryBankAPIClient, MercuryBankAPIError
 
 try:
     client = MercuryBankAPIClient(api_token="invalid_token")
@@ -179,7 +190,7 @@ The Mercury API uses Bearer token authentication. You can obtain an API token fr
 
 ```python
 import os
-from mercury_client import MercuryBankAPIClient
+from mercury_bank_api import MercuryBankAPIClient
 
 api_token = os.getenv("MERCURY_API_TOKEN")
 client = MercuryBankAPIClient(api_token=api_token)
