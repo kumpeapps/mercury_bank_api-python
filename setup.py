@@ -4,6 +4,6 @@ This setup.py is kept for backward compatibility.
 The main configuration is in pyproject.toml.
 """
 
-from setuptools import setup
+from setuptools import setup # type: ignore
 
 setup()
