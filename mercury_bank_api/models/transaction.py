@@ -44,10 +44,7 @@ class DomesticWireRoutingInfo:
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "DomesticWireRoutingInfo":
         """Create a DomesticWireRoutingInfo from a dictionary."""
-        address = None
-        if data.get("address"):
-            address = Address.from_dict(data["address"])
-
+        address = Address.from_dict(data["address"]) if data.get("address") else None
         return cls(
             accountNumber=data["accountNumber"],
             routingNumber=data["routingNumber"],
