@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mercury_bank_api"
+version = "1.0.0"
+description = "A comprehensive Python client for the Mercury Bank API"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Justin Kumpe", email = "jakumpe@kumpeapps.com"}
+]
+maintainers = [
+    {name = "Justin Kumpe", email = "jakumpe@kumpeapps.com"}
+]
+keywords = ["mercury", "bank", "api", "banking", "transactions", "finance"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers", 
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+    "python-dateutil>=2.8.0",
+    "typing-extensions>=4.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/KumpeApps/mercury_bank_api-python"
+Documentation = "https://docs.mercury.com/reference"
+Repository = "https://github.com/KumpeApps/mercury_bank_api-python"
+"Bug Tracker" = "https://github.com/KumpeApps/mercury_bank_api-python/issues"
+
+[tool.setuptools.packages.find]
+include = ["mercury_bank_api*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
