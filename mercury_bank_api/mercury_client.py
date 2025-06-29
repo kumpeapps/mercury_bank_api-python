@@ -5,8 +5,8 @@ from typing import Optional, Dict, Any, List
 from urllib.parse import urljoin
 import logging
 
-from models.account import Account
-from models.transaction import TransactionResponse, Transaction
+from .models.account import Account
+from .models.transaction import TransactionResponse, Transaction
 
 
 class MercuryBankAPIError(Exception):
