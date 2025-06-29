@@ -3,13 +3,13 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional, Literal, Dict, Any
-from dateutil.parser import parse as parse_date
+from dateutil.parser import parse as parse_date # type: ignore[import]
 
 
 @dataclass
 class Account:
     """Represents a Mercury bank account."""
-    
+
     accountNumber: str
     availableBalance: float
     createdAt: datetime
@@ -23,7 +23,7 @@ class Account:
     legalBusinessName: str
     canReceiveTransactions: Optional[bool] = None
     nickname: Optional[str] = None
-    
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Account":
         """Create an Account from a dictionary."""
@@ -31,7 +31,7 @@ class Account:
         created_at = data["createdAt"]
         if isinstance(created_at, str):
             created_at = parse_date(created_at)
-        
+
         return cls(
             accountNumber=data["accountNumber"],
             availableBalance=float(data["availableBalance"]),
@@ -45,5 +45,5 @@ class Account:
             type=data["type"],
             legalBusinessName=data["legalBusinessName"],
             canReceiveTransactions=data.get("canReceiveTransactions"),
-            nickname=data.get("nickname")
+            nickname=data.get("nickname"),
         )

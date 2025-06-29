@@ -15,7 +15,7 @@ from .transaction import (
     CreditCardInfo,
     CurrencyExchangeInfo,
     Attachment,
-    TransactionResponse
+    TransactionResponse,
 )
 
 __all__ = [
@@ -33,5 +33,5 @@ __all__ = [
     "CreditCardInfo",
     "CurrencyExchangeInfo",
     "Attachment",
-    "TransactionResponse"
+    "TransactionResponse",
 ]

@@ -54,6 +54,8 @@ for transaction in transactions.transactions:
     print(f"${transaction.amount:.2f} - {transaction.counterpartyName}")
 ```
 
+**Note:** Make sure to replace `"your_api_token_here"` with your actual Mercury API token from your [Mercury dashboard](https://mercury.com/settings/tokens).
+
 ## API Reference
 
 ### MercuryBankAPIClient
@@ -181,6 +183,13 @@ try:
 except MercuryBankAPIError as e:
     print(f"API Error: {e}")
 ```
+
+### Common Error Messages
+
+- **401 Unauthorized**: Invalid or missing API token. Check your token in the [Mercury dashboard](https://mercury.com/settings/tokens)
+- **403 Forbidden**: Token doesn't have sufficient permissions for the requested operation
+- **404 Not Found**: The requested resource (account, transaction) doesn't exist
+- **429 Too Many Requests**: Rate limit exceeded. Implement retry logic with backoff
 
 ## Authentication
 
